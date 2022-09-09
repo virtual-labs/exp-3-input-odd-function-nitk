@@ -2,10 +2,12 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "Stuck-at-0 or Stuck-at-1 is a type of registance in circuit ?",
+      "question": "\"The expression of an XOR gate is —",
       "answers": {
-        "a": "True",
-        "b": "False"
+        "a": "A’.B+A.B’",
+        "b": "A.B+A’.B’",
+        "c": "A.B’",
+        "d": "A.A’+B.B’"
       },
       "explanations": {
         "a": "",
@@ -17,12 +19,12 @@
       "difficulty": "intermediate"
     },
     {
-      "question": "\"Must have one or the other but not both\", this statement is correct for which gate ?",
+      "question": "\"The expression of an EXOR gate is —",
       "answers": {
-        "a": "OR",
-        "b": "AND",
-        "c": "XOR",
-        "d": "XNOR"
+        "a": "A’.B",
+        "b": "A.B+A’.B’",
+        "c": "A’.B+A.B’",
+        "d": "A.A’+B.B"
       },
       "explanations": {
         "a": "",
@@ -31,15 +33,32 @@
         "d": ""
       },
       "correctAnswer": "c",
+      "difficulty": "advanced"
+    },
+    {
+      "question": "For a circuit with k lines _______ single stuck at faults is possible.",
+      "answers": {
+        "a": "k",
+        "b": "2k",
+        "c": "k/2",
+        "d": "k^2"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
       "difficulty": "beginner"
     },
     {
-      "question": "With three or more variables XOR gate is equal to 1",
+      "question": " When logic gates are connected to form a gating/logic network it is called as a ______ logic circuit.",
       "answers": {
-        "a": "If an even number of variables must be equal to 1",
-        "b": "If an odd number of variables must be equal to 1",
-        "c": "Both the above options",
-        "d": "We can not determine with the given data"
+        "a": "Combinational",
+        "b": "Sequential",
+        "c": "Hardwires",
+        "d": "Systematic"
       },
       "explanations": {
         "a": "",
@@ -48,15 +67,15 @@
         "d": ""
       },
       "correctAnswer": "a",
-      "difficulty": "advanced"
+      "difficulty": "intermediate"
     },
     {
-      "question": "The expression of an XOR gate is?",
+      "question": "The total number of distinct multiple stuck at faults possible in a circuit with n lines is—",
       "answers": {
-        "a": "A'B + AB'",
-        "b": "3 bits",
-        "c": "A + A.B",
-        "d": "A' + B'"
+        "a": "3^n",
+        "b": "3^n-1",
+        "c": "2^n-1",
+        "d": "2"
       },
       "explanations": {
         "a": "",
@@ -64,25 +83,8 @@
         "c": "",
         "d": ""
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "beginner"
-    },
-    {
-      "question": "In a wire, how many possibilities are there ?",
-      "answers": {
-        "a": "Stuck-at-0-fault",
-        "b": "Stuck-at-1-fault",
-        "c": "No fault",
-        "d": "All of these"
-      },
-      "explanations": {
-        "a": "",
-        "b": "",
-        "c": "",
-        "d": ""
-      },
-      "correctAnswer": "d",
-      "difficulty": "advanced"
     }
   ]
 }
