@@ -36,23 +36,44 @@ turnBulb(
   )
 );
 
-// who is stuck at
+function Refresh() {
+  window.location = window.location.href;
+}
+
+
+let lastClickedButton = null; // Variable to store the last clicked button
+
 function whereStuckAt(e) {
-  if (stuckAt == e.dataset.value) {
-    document.getElementById(stuckAt).style.visibility = "hidden";
-    stuckAt = 0;
-    e.style.backgroundColor = "#27d447";
-  } else if (stuckAt == 0) {
-    stuckAt = e.dataset.value;
-    document.getElementById(stuckAt).style.visibility = "visible";
-    e.style.backgroundColor = "#ff6600";
-  } else {
-    stuckAtButton[stuckAt - 1].style.backgroundColor = "#27d447";
-    document.getElementById(stuckAt).style.visibility = "hidden";
-    stuckAt = e.dataset.value;
-    document.getElementById(stuckAt).style.visibility = "visible";
-    e.style.backgroundColor = "#ff6600";
+  const elementToHide = document.getElementById(stuckAt); // Element to hide
+  const newStuckAtValue = e.dataset.value; // New `stuckAt` value from button
+
+  // Reset the color of the previously clicked button
+  if (lastClickedButton && lastClickedButton !== e) {
+    lastClickedButton.style.backgroundColor = "#fff"; // Default color
   }
+
+  if (stuckAt == newStuckAtValue) {
+    if (elementToHide) {
+      elementToHide.style.visibility = "hidden";
+    }
+    stuckAt = 0;
+    e.style.backgroundColor = "#fff"; // Set color to default when deselected
+  } else {
+    if (elementToHide) {
+      elementToHide.style.visibility = "hidden";
+    }
+    stuckAt = newStuckAtValue;
+    const elementToShow = document.getElementById(stuckAt);
+    if (elementToShow) {
+      elementToShow.style.visibility = "visible";
+    }
+    e.style.backgroundColor = "#ff6600"; // Highlight color for selected button
+  }
+
+  // Store the currently clicked button as the last clicked button
+  lastClickedButton = e;
+
+  // Generate the output and turn on the bulb
   output = answer(
     switches[0].dataset.value,
     switches[1].dataset.value,
@@ -82,15 +103,6 @@ function turnBulb(output) {
   let bulb = document.querySelector(".bulb");
   bulb.src = output == 0 ? "./images/offg.png" : "./images/ong.png";
 }
-
-// if fault is at A
-// answer = result[A][B][C]
-
-// if fault is at B
-// answer = result[B][A][C]
-
-// if fault is at C
-// answer = result[C][A][B]
 
 function answer(A, B, C, stuckAt) {
   if (stuckAt == "0") {

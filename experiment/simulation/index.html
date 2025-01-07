@@ -1,138 +1,191 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SOLVE</title>
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css"
+    />
+    <link rel="stylesheet" href="css/general.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/query.css" />
+    <script
+      defer
+      src="https://code.jquery.com/jquery-3.7.0.min.js"
+      integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+      crossorigin="anonymous"
+    ></script>
+    <script src='https://cdn.plot.ly/plotly-2.12.1.min.js'></script>
+    <title>Virtual Lab</title>
+    <script src='https://cdn.plot.ly/plotly-2.18.2.min.js'></script>
+    <script
+      defer
+      type="text/javascript"
+      src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"
+    ></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/table.css">
-    <title>Simulator</title>
-</head>
+  </head>
+  <body>
+    <div class="container">
+    <div class="title-div-container">
+      <div class="title-div">
+          <div class="logo-div">
+            <a href="#"><img src="images/logo_nitk.png" alt="Logo" class="logo" /></a>
+          </div>
+          <h1>SA0 & SA1 Fault in 3-input odd function Simulator
+          </h1>
+        </div>
+      </div>
+      <div class="sidebar">
+        <ul class="tool-menu">
 
-<body>
-    <div class="simulator-main container">
-        <h2 style="text-align: center; font-weight: bold; font-size: 32px; margin-top: 2rem;">SA0 & SA1 Fault in 3-input
-            odd function
-            Simulator</h2>
-        <div class="circuit-main container">
-            <img src="./images/circuit.png" alt="">
-            <!-- switch A -->
-            <img id="switchA" class="switch" data-value="0" src="./images/switchoff.png" onclick="turnSwitch(this) "
+          
+          <li class="tool-list tool-practice" >
+            <a class="tool-link" title="Experiment"
+              ><img src="./images/solution.png" alt="solution" class="icons"
+              ></a
+              >
+              <span>Simulation</span>
+          </li>
+
+          
+          <li class="tool-list tool-practice" onclick="addResult()">
+            <a class="tool-link" title="Add"
+              ><img src="./images/add2.png" alt="solution" class="icons"
+              ></a
+              >
+              <span>Add</span>
+          </li>
+
+          <li class="tool-list tool-practice" onclick="window.print()">
+            <a class="tool-link" title="Print"
+              ><img src="./images/print1.png" alt="solution" class="icons"
+              ></a
+              >
+              <span>Print</span>
+          </li>
+
+          <li class="tool-list tool-help" onclick="displayDiv(this)">
+            <a class="tool-link" title="Help" onclick="Refresh()"
+              ><img src="./images/bluecwdull.svg" alt="Help" class="icons"
+              ></a
+              >
+              <span>Refresh</span>
+          </li>
+          
+        </ul>
+      </div> 
+      <div class="main">
+        <div class="main-section">
+          <div id="simulation" class="main__task-div">
+            <h3 class="task-title">Simulation</h3>
+           
+            <div class="canvas__div">
+              <div class="task-screen apparatus hide">
+              </div>
+              <div class="task-screen practice">
+                  <span id="Rfvalue" style="display:none ;"></span>
+                  <div class="grid-container">
+                    <div class="div1">
+                    <img id="ciruit" src="images/circuit_new1.png" alt="Image 1">
+
+                <img id="switchA" class="switch" data-value="0" src="./images/switchoff.png" onclick="turnSwitch(this)"
                 alt="Switch A" />
-            <!-- switch B -->
-            <img id="switchB" class="switch" data-value="0" src="./images/switchoff.png" onclick="turnSwitch(this)"
+           <img id="switchB" class="switch" data-value="0" src="./images/switchoff.png" onclick="turnSwitch(this)"
                 alt="Switch B" />
-            <!-- switch C -->
-            <img id="switchC" class="switch" data-value="0" src="./images/switchoff.png" onclick="turnSwitch(this)"
+           <img id="switchC" class="switch" data-value="0" src="./images/switchoff.png" onclick="turnSwitch(this)"
                 alt="Switch C" />
-            <!-- Bulb -->
-            <img class="bulb" src="./images/offg.png" alt="Output Bulb">
-            <!-- Stuck At Selector -->
-            <div class="stuck-at-selector">
-                <h4>Stuck At</h4><span></span>
-                <button class="stuck-at-button" data-value="1" onclick="whereStuckAt(this)">
-                    A SA0
-                </button>
-                <button class="stuck-at-button" data-value="2" onclick="whereStuckAt(this)">
-                    A SA1
-                </button>
-                <button class="stuck-at-button" data-value="3" onclick="whereStuckAt(this)">
-                    B SA0
-                </button>
-                <button class="stuck-at-button" data-value="4" onclick="whereStuckAt(this)">
-                    B SA1
-                </button>
-                <button class="stuck-at-button" data-value="5" onclick="whereStuckAt(this)">
-                    C SA0
-                </button>
-                <button class="stuck-at-button" data-value="6" onclick="whereStuckAt(this)">
-                    C SA1
-                </button>
-                <button class="stuck-at-button" data-value="7" onclick="whereStuckAt(this)">
-                    D SA0
-                </button>
-                <button class="stuck-at-button" data-value="8" onclick="whereStuckAt(this)">
-                    D SA1
-                </button>
-                <button class="stuck-at-button" data-value="9" onclick="whereStuckAt(this)">
-                    E SA0
-                </button>
-                <button class="stuck-at-button" data-value="10" onclick="whereStuckAt(this)">
-                    E SA1
-                </button>
-            </div>
-            <!-- stuck at labels -->
-            <span class="st-lables" id="1" style="left: 190px;
-            top: 170px;">SA0</span>
-            <span class="st-lables" id="2" style="left: 190px;
-            top: 170px;">SA1</span>
-            <span class="st-lables" id="3" style="left: 190px;
-            top: 252px;">SA0</span>
-            <span class="st-lables" id="4" style="left: 190px;
-            top: 252px;">SA1</span>
-            <span class="st-lables" id="5" style="left: 190px;
-            top: 460px;">SA0</span>
-            <span class="st-lables" id="6" style="left: 190px;
-            top: 460px;">SA1</span>
-            <span class="st-lables" id="7" style="left: 540px;
-            top: 210px;">SA0</span>
-            <span class="st-lables" id="8" style="left: 540px;
-            top: 210px;">SA1</span>
-            <span class="st-lables" id="9" style="right: 90px;
-            top: 254px;">SA0</span>
-            <span class="st-lables" id="10" style="right: 90px;
-            top: 254px;">SA1</span>
+                <img class="bulb" src="./images/offg.png" alt="Output Bulb">
+            <span class="st-labels pos-1" id="1">SA0</span>
+            <span class="st-labels pos-2" id="2">SA1</span>
+            <span class="st-labels pos-3" id="3">SA0</span>
+            <span class="st-labels pos-4" id="4">SA1</span>
+            <span class="st-labels pos-5" id="5">SA0</span>
+            <span class="st-labels pos-6" id="6">SA1</span>
+            <span class="st-labels pos-7" id="7">SA0</span>
+            <span class="st-labels pos-8" id="8">SA1</span>
+            <span class="st-labels pos-9" id="9">SA0</span>
+            <span class="st-labels pos-10" id="10">SA1</span>
+                  </div>
+                  <div class="div2">
+                    <div class="stuck-at-selector">
+                      <h4>Stuck At</h4><span></span>
+                      <button class="stuck-at-button" data-value="1" onclick="whereStuckAt(this)">
+                          A SA0
+                      </button>
+                      <button class="stuck-at-button" data-value="2" onclick="whereStuckAt(this)">
+                          A SA1
+                      </button>
+                      <button class="stuck-at-button" data-value="3" onclick="whereStuckAt(this)">
+                          B SA0
+                      </button>
+                      <button class="stuck-at-button" data-value="4" onclick="whereStuckAt(this)">
+                          B SA1
+                      </button>
+                      <button class="stuck-at-button" data-value="5" onclick="whereStuckAt(this)">
+                          C SA0
+                      </button>
+                      <button class="stuck-at-button" data-value="6" onclick="whereStuckAt(this)">
+                          C SA1
+                      </button>
+                      <button class="stuck-at-button" data-value="7" onclick="whereStuckAt(this)">
+                          D SA0
+                      </button>
+                      <button class="stuck-at-button" data-value="8" onclick="whereStuckAt(this)">
+                          D SA1
+                      </button>
+                      <button class="stuck-at-button" data-value="9" onclick="whereStuckAt(this)">
+                          E SA0
+                      </button>
+                      <button class="stuck-at-button" data-value="10" onclick="whereStuckAt(this)">
+                          E SA1
+                      </button>
+                  </div>
+                  </div>
+                  </div>
+        <div class="simulator-table container1">
+        <table class="tg" >
+            <thead>
+                <tr>
+                    <th class="tg-b7zx" colspan="3">Input</th>
+                    <th class="tg-ogub" rowspan="2">Fault</th>
+                    <th class="tg-ogub" rowspan="2">Output <br>(without Fault)</th>
+                    <th class="tg-ogub" rowspan="2">Output <br>(with Fault)</th>
+                </tr>
+                <tr>
+                    <th class="tg-b7zx">X</th>
+                    <th class="tg-b7zx">Y</th>
+                    <th class="tg-b7zx">Z</th>
+                </tr>
+            </thead>
+            <tbody id="insert-here">
+                <tr >
+                    <td class="tg-nrix">0</td>
+                    <td class="tg-nrix">0</td>
+                    <td class="tg-nrix">0</td>
+                    <td class="tg-nrix">N/A</td>
+                    <td class="tg-nrix">0</td>
+                    <td class="tg-nrix">0</td>
+                </tr>
+            </tbody>
+        </table>
         </div>
-        <div
-            style="margin-top: 3rem; margin-right: 10rem; width: 20%; margin-left: auto; display: flex; justify-content: flex-end;">
-            <button onclick="addResult()" class="add-button"
-                style="padding: 0.5rem 1rem; background-color: #27d447; margin: auto;">
-                Add
-            </button>
-            <button onclick="window.location.reload();" class="add-button"
-                style="padding: 0.5rem 1rem; background-color: #27d447; margin: auto;">
-                Reset
-            </button>
-            <button onclick="window.print()" class="add-button"
-                style="padding: 0.5rem 1rem; background-color: #27d447; margin: auto;">
-                Print
-            </button>
         </div>
-        <div class="simulator-table container"
-            style="width: 900px; margin-bottom: 3rem; display: flex; flex-direction: column; justify-content: center; ">
-
-
-            <table class="tg">
-                <thead>
-                    <tr>
-                        <th class="tg-b7zx" colspan="3">Input</th>
-                        <th class="tg-ogub" rowspan="2">Fault</th>
-                        <th class="tg-ogub" rowspan="2">Output <br>(without Fault)</th>
-                        <th class="tg-ogub" rowspan="2">Output <br>(with Fault)</th>
-                    </tr>
-                    <tr>
-                        <th class="tg-b7zx">X</th>
-                        <th class="tg-b7zx">Y</th>
-                        <th class="tg-b7zx">Z</th>
-                    </tr>
-                </thead>
-                <tbody id="insert-here">
-                    <tr style="background-color: #96ff96;">
-                        <td class="tg-nrix">0</td>
-                        <td class="tg-nrix">0</td>
-                        <td class="tg-nrix">0</td>
-                        <td class="tg-nrix">N/A</td>
-                        <td class="tg-nrix">0</td>
-                        <td class="tg-nrix">0</td>
-                    </tr>
-                </tbody>
-            </table>
-
-
+          </div>
+          </div>
+         
+          <div class="main__task-div footer">
+            <p>Copyright © SOLVE The Virtual Lab @ NITK Surathkal</p>
+          </div>
         </div>
     </div>
-</body>
-<script src="./js/simulation.js"></script>
-
+    <script defer src="js/script.js"></script>
+  </body>
 </html>
