@@ -2,7 +2,7 @@
   "version": 1.0,
   "questions": [
     {
-      "question": "Stuck-at-0 or Stuck-at-1 is a type of registance in circuit ?",
+      "question": "Stuck-at-0 or Stuck-at-1 is a type of resistance in circuit?",
       "answers": {
         "a": "True",
         "b": "False"
@@ -13,7 +13,7 @@
         "c": "",
         "d": ""
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "intermediate"
     },
     {
@@ -34,7 +34,7 @@
       "difficulty": "beginner"
     },
     {
-      "question": "With three or more variables XOR gate is equal to 1",
+      "question": "For three or more input variables, under what condition is the output of an XOR gate equal to 1?",
       "answers": {
         "a": "If an even number of variables must be equal to 1",
         "b": "If an odd number of variables must be equal to 1",
@@ -47,7 +47,7 @@
         "c": "",
         "d": ""
       },
-      "correctAnswer": "a",
+      "correctAnswer": "b",
       "difficulty": "advanced"
     },
     {
