@@ -1,13 +1,13 @@
 ### INTRODUCTION<br>
 <h3>Exclusive-OR (XOR):</h3>
-<p style="text-indent:50px; text-align:justify;">XOR gate is formed by a combination of AND-OR-INVERT (AOI) logic. XOR gate (sometimes EOR, or EXOR and pronounced as Exclusive OR) is a digital logic gate that gives a true (1 or HIGH) output when the number of true inputs is odd. An XOR gate implements an exclusive or from mathematical logic; that is, true output results if one, and only one, of the inputs to the gate is true. If both inputs are false (0/LOW) or both are true false output results. XOR represents the inequality function, i.e., the output is true if the inputs are not alike otherwise the output is false. A way to remember XOR is "must have one or the other but not both".</p><br>
+<p style="text-indent:50px; text-align:justify;">The XOR gate, also known as Exclusive OR (sometimes written as EOR or EXOR), is constructed using AND-OR-INVERT (AOI) logic. It produces a HIGH (1) output when the number of HIGH inputs is odd. This means the output is true only if exactly one of the inputs is true, and false if both inputs are the same (either both 0 or both 1). XOR essentially checks for inequality between inputs. A simple way to remember XOR is: "one or the other, but not both."</p><br>
 
-<p style="text-indent:50px; text-align:justify;">The three-variable XOR is equal to 1 if only one variable is equal to 1 or if all three variables are equal to 1. With three or more variables an odd number of variables must be equal to 1.</p>
+<p style="text-indent:50px; text-align:justify;">For three inputs, the XOR gate outputs 1 when either exactly one input is 1 or when all three inputs are 1. In general, for three or more inputs, the output is 1 if an odd number of the inputs are 1.</p>
 <br>
 
 <figure>
     <img src="./images/image4.png" alt="schematic symbols for XOR gates">
-    <figcaption>schematic symbols for XOR gates</figcaption>
+    <figcaption>Schematic symbols for XOR gates</figcaption>
 </figure>
 
 <figure style="text-align: center; margin: 1rem;">
@@ -18,13 +18,13 @@
 
 <h3>Faults in logical circuits:</h3>
             
-<p style="text-indent:50px; text-align:justify;">Fault is a physical defect within a circuit or a system that may or may not cause a system failure. It is a logic-level abstraction of a physical defect and is used to describe the change in the logic function of a device caused by the defect.</p><br>
+<p style="text-indent:50px; text-align:justify;"> A fault is a physical defect in a circuit or system that may lead to malfunction. It is typically represented at the logic level to simplify analysis, serving as an abstract model of how a physical defect alters the circuit’s logical behavior.</p><br>
 
-<p style="text-indent:50px; text-align:justify;">Logical errors are used to represent physical errors. They simplify the error analysis process and reduce the number of errors. The most common model used for logical faults is the "single stuck-at fault". It assumes that a fault in a logic gate results in one of its inputs or the output being fixed to either a logic 0 (stuck at-0) or a logic 1 (stuck-at-1). Stuck-at-0 and stuck-at-1 faults are often abbreviated to s-a-0 and s-a-1 respectively, and the abbreviations will be adopted here.</p><br>
+<p style="text-indent:50px; text-align:justify;">To streamline error detection and reduce complexity, logical errors are used to represent physical faults. The most widely used model is the <strong>single stuck-at fault</strong>, where a fault causes a signal (input or output) to be permanently fixed at logic 0 (stuck-at-0 or s-a-0) or logic 1 (stuck-at-1 or s-a-1).</p><br>
             
             
 <h3> Stuck-at fault (SAF):</h3>
-<p style="text-indent:50px; text-align:justify;">A stuck-at fault is a particular fault model used by fault simulators and tools to mimic a manufacturing defect within an integrated circuit. Individual signals and pins are assumed to be stuck at Logical '1', '0', and 'X'. For example, an input is tied to a logical 1 state during test generation to assure that a manufacturing defect with that type of behavior can be found with a specific test pattern. Likewise, the input could be tied to a logical 0 to model the behavior of a defective circuit that cannot switch its output pin.</p>
+<p style="text-indent:50px; text-align:justify;"><p style="text-indent:50px; text-align:justify;">This model simulates manufacturing defects by assuming certain signals or pins are permanently stuck at a logical '1', '0', or 'X'. For instance, an input may be assumed stuck at logic 1 during test generation to ensure a test pattern can detect a defect with that behavior. Similarly, it could be stuck at logic 0 to simulate a fault that prevents proper signal switching.</p></p>
 
 <br>
 <figure>

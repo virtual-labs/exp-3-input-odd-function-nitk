@@ -2,7 +2,7 @@
   "version": 1.0,
   "questions": [
     {
-      "question": "Which is/are the properties of a single stuck-at-fault ?",
+      "question": "Which are the properties of a single stuck-at fault in digital circuits?",
       "answers": {
         "a": "Only one line is faulty",
         "b": "The faulty line is parmanenetly set to 0 or 1",
@@ -13,13 +13,13 @@
         "a": "",
         "b": "",
         "c": "",
-        "d": ""
+        "d": "A single stuck-at fault model assumes only one fault at a time, with the affected line fixed at logic 0 or 1. This fault can be located at any node in the circuit—before or after logic gates—making it a widely used fault model in digital testing."
       },
       "correctAnswer": "d",
       "difficulty": "intermediate"
     },
     {
-      "question": "When will the output always be 1 in 2-input XOR gate ?",
+      "question": "When will the output always be 1 in 2-input XOR gate?",
       "answers": {
         "a": "When both the inputs are same",
         "b": "When both the inputs are different",
@@ -28,28 +28,28 @@
       },
       "explanations": {
         "a": "",
-        "b": "",
+        "b": "An XOR (Exclusive OR) gate outputs logic high (1) only when the two inputs differ—that is, one input is high (1) and the other is low (0). If both inputs are the same (either 0 and 0 or 1 and 1), the output is logic low (0).",
         "c": "",
         "d": ""
       },
-      "correctAnswer": "a",
-      "difficulty": "advanced"
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
     },
     {
-      "question": "We can put Stuck-at-fault anywhere in circuit (before and after gate)?",
+      "question": "A stuck-at fault may be introduced at any point within a digital circuit, including both the input and output nodes of logic gates?",
       "answers": {
         "a": "True",
         "b": "False"
       },
       "explanations": {
-        "a": "",
+        "a": " A stuck-at fault may be introduced at any point within a digital circuit, including both the input and output nodes of logic gates.",
         "b": ""
       },
       "correctAnswer": "a",
       "difficulty": "beginner"
     },
     {
-      "question": "From the following options which is the real world example of XOR gate?",
+      "question": "Which of the following options represents a real-world application of an XOR gate?",
       "answers": {
         "a": "Radio",
         "b": "Switch Board",
@@ -59,14 +59,14 @@
       "explanations": {
         "a": "",
         "b": "",
-        "c": "",
+        "c": "The Game Show Buzzer exemplifies an XOR gate because it produces an output when exactly one of the inputs is high, and outputs false when both inputs are either low or high, which mirrors the behavior of an XOR gate.",
         "d": ""
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
     },
     {
-      "question": "How many inputs is/are required to define stuck-at concept?",
+      "question": "How many inputs are required to define a stuck-at fault concept?",
       "answers": {
         "a": "Minimum 1, Maximum 3",
         "b": "Minimum 1, Maximum 5",
@@ -76,10 +76,10 @@
       "explanations": {
         "a": "",
         "b": "",
-        "c": "",
+        "c": "At least two input patterns are generally required—one to activate the fault (by setting the fault site to the opposite logic value) and another to propagate the effect to a primary output. The maximum depends on the complexity and size (n) of the circuit.",
         "d": ""
       },
-      "correctAnswer": "d",
+      "correctAnswer": "c",
       "difficulty": "intermediate"
     }
   ]
