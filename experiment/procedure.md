@@ -1,9 +1,7 @@
 ##### These procedure steps will be followed on the simulator
 
-1. Use switches to change input value for X,Y,Z
-
-2. Select the point and fault you want to simulate from the sidebar.
-
-3. Click on "Add" to add simulation result to the table
-
-4. Repeat from step 1 with different input and fault combinations.
+1. Use the input switches to set the values of X, Y, and Z.
+2. Select the desired switching points and fault types from the sidebar.
+3. Click the "Add" button to log the input values, fault condition, and both faulty and fault-free outputs in the table.
+4. Repeat the steps for different combinations of inputs and faults.
+5. Click the "Print" button to either print the results or save them as a PDF.
