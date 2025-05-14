@@ -9,10 +9,10 @@
 <figure>
     <img src="./images/image4.png" alt="schematic symbols for XOR gates">
     <figcaption>Schematic symbols for XOR gates</figcaption>
-</figure></br>
+</figure></br></br></br>
 
 <figure style="text-align: center; margin: 1rem;">
-    <img src="./images/image1.jpg" style="width:80%; max-width: 600px; " alt="">
+    <img src="./images/image1.jpg" style="width:50%; max-width: 600px; " alt="">
 </figure>
 
 <br>
