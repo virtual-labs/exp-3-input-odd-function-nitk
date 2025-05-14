@@ -11,7 +11,7 @@
 | :--: | :-- | :-------: |
 |  1   | Prajwal Kumar | NITK |
 |  2   | Vismaya M Kumar | NITK |
-|  2   | Anusha B Salian | NITK |
-|  3   | Akshaya | NITK |
+|  3   | Anusha B Salian | NITK |
+|  4   | Akshaya | NITK |
 
 
