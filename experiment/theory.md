@@ -21,13 +21,11 @@
             
 <p style="text-align:justify;"> A fault is a physical defect in a circuit or system that may lead to malfunction. It is typically represented at the logic level to simplify analysis, serving as an abstract model of how a physical defect alters the circuit’s logical behavior.</p><br>
 
-<p style="text-align:justify;">To streamline error detection and reduce complexity, logical errors are used to represent physical faults. The most widely used model is the <strong>single stuck-at fault</strong>, where a fault causes a signal (input or output) to be permanently fixed at logic 0 (stuck-at-0 or s-a-0) or logic 1 (stuck-at-1 or s-a-1).</p><br>
-            
+<p style="text-align:justify;">To streamline error detection and reduce complexity, logical errors are used to represent physical faults. The most widely used model is the <strong>single stuck-at fault</strong>, where a fault causes a signal (input or output) to be permanently fixed at logic 0 (stuck-at-0 or s-a-0) or logic 1 (stuck-at-1 or s-a-1).</p>
             
 ### Stuck-at fault (SAF) 
-<p style="text-align:justify;">This model simulates manufacturing defects by assuming certain signals or pins are permanently stuck at a logical '1', '0', or 'X'. For instance, an input may be assumed stuck at logic 1 during test generation to ensure a test pattern can detect a defect with that behavior. Similarly, it could be stuck at logic 0 to simulate a fault that prevents proper signal switching.</p></p>
+<p style="text-align:justify;">This model simulates manufacturing defects by assuming certain signals or pins are permanently stuck at a logical '1', '0', or 'X'. For instance, an input may be assumed stuck at logic 1 during test generation to ensure a test pattern can detect a defect with that behavior. Similarly, it could be stuck at logic 0 to simulate a fault that prevents proper signal switching.</p>
 
-<br>
 <figure>
     <img src="./images/circuit1.png" alt=" SAF">
     <figcaption>A,B,C,D,E are diffrent points in the circuit. They can be stuck at 0 or 1 due to the fault.
