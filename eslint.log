@@ -1,0 +1,10 @@
+
+/home/runner/work/exp-3-input-odd-function-nitk/exp-3-input-odd-function-nitk/experiment/simulation/js/script.js
+   39:10  warning  'Refresh' is defined but never used       no-unused-vars
+   46:10  warning  'whereStuckAt' is defined but never used  no-unused-vars
+   87:10  warning  'turnSwitch' is defined but never used    no-unused-vars
+  141:10  warning  'addResult' is defined but never used     no-unused-vars
+  169:10  warning  'fillTable' is defined but never used     no-unused-vars
+
+✖ 5 problems (0 errors, 5 warnings)
+
