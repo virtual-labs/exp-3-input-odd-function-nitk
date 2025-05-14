@@ -1,4 +1,4 @@
-##### These procedure steps will be followed on the simulator
+### Procedure
 
 1. Use the input switches to set the values of X, Y, and Z.
 2. Select the desired switching points and fault types from the sidebar.
