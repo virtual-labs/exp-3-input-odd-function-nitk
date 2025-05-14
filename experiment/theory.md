@@ -12,14 +12,14 @@
 </figure></br></br></br>
 
 <figure style="text-align: center; margin: 1rem;">
-    <img src="./images/image1.jpg" style="width:50%; max-width: 600px; " alt="">
+    <img src="./images/image1.jpg" style="width:60%; max-width: 600px; " alt="">
 </figure>
 
 <br>
 
 ### Faults in logical circuits
             
-<p style="text-align:justify;"> A fault is a physical defect in a circuit or system that may lead to malfunction. It is typically represented at the logic level to simplify analysis, serving as an abstract model of how a physical defect alters the circuit’s logical behavior.</p><br>
+<p style="text-align:justify;"> A fault is a physical defect in a circuit or system that may lead to malfunction. It is typically represented at the logic level to simplify analysis, serving as an abstract model of how a physical defect alters the circuit’s logical behavior.</p>
 
 <p style="text-align:justify;">To streamline error detection and reduce complexity, logical errors are used to represent physical faults. The most widely used model is the <strong>single stuck-at fault</strong>, where a fault causes a signal (input or output) to be permanently fixed at logic 0 (stuck-at-0 or s-a-0) or logic 1 (stuck-at-1 or s-a-1).</p>
             
