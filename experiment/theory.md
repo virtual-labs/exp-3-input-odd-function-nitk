@@ -1,4 +1,4 @@
-### INTRODUCTION
+### Introduction
 
 ### Exclusive-OR (XOR) 
 <p style="text-align:justify;">The XOR gate, also known as Exclusive OR (sometimes written as EOR or EXOR), is constructed using AND-OR-INVERT (AOI) logic. It produces a HIGH (1) output when the number of HIGH inputs is odd. This means the output is true only if exactly one of the inputs is true, and false if both inputs are the same (either both 0 or both 1). XOR essentially checks for inequality between inputs. A simple way to remember XOR is: "one or the other, but not both."</p><br>
