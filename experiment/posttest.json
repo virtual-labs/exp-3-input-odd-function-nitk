@@ -2,38 +2,85 @@
   "version": 2.0,
   "questions": [
     {
-      "question": "This is a Sample Question 1?",
+      "question": "Stuck -at-0 or Stuck-at-1 is type of resistance in a circuit?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "True",
+        "b": "False"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "'Stuck-at-0' or 'Stuck-at-1' faults are logical errors where a signal remains fixed, unrelated to resistance or physical issues in the circuit. /A stuck-at-0 or stuck-at-1 fault is not a type of resistance fault - it is a logical fault model used in digital circuits."
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
+      "correctAnswer": "b",
+      "difficulty": "intermediate"
     },
     {
-      "question": "This is a Sample Question 2?",
+      "question": "Which logic gate is described by the statement: 'Must have one or the other, but not both'?",
       "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+        "a": "OR",
+        "b": "AND",
+        "c": "XOR",
+        "d": "XNOR"
       },
       "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+        "a": "",
+        "b": "",
+        "c": "The statement 'Must have one or the other, but not both' describes the behavior of an XOR (Exclusive OR) gate, which outputs 1 only when exactly one of its inputs is 1 - not both.",
+        "d": ""
       },
       "correctAnswer": "c",
       "difficulty": "beginner"
+    },
+    {
+      "question": "For an XOR gate with three or more input variables, the output will be 1 _____________________________ .",
+      "answers": {
+        "a": "If an even number of variables must be equal to 1",
+        "b": "If an odd number of variables must be equal to 1",
+        "c": "Both the above options",
+        "d": "We can not determine with the given data"
+      },
+      "explanations": {
+        "a": "",
+        "b": "The XOR (exclusive OR) gate outputs 1 only when the number of inputs that are 1 is odd. This holds true whether there are 2 inputs, 3, or more. So for 3 or more inputs, the XOR gate still outputs 1 if the count of 1s among the inputs is odd.",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "b",
+      "difficulty": "beginner"
+    },
+    {
+      "question": "Which of the following Boolean expressions correctly represents the logic function of a 2-input XOR (Exclusive OR) gate?",
+      "answers": {
+        "a": "A'B + AB'",
+        "b": "3 bits",
+        "c": "A + A.B",
+        "d": "A' + B'"
+      },
+      "explanations": {
+        "a": "The XOR gate outputs high (1) when the inputs are different. The Boolean expression A'B + AB' captures this behavior, as it represents the sum of the conditions where only one input is high.",
+        "b": "",
+        "c": "",
+        "d": ""
+      },
+      "correctAnswer": "a",
+      "difficulty": "intermediate"
+    },
+    {
+      "question": "What are the possible conditions for a wire in a digital circuit?",
+      "answers": {
+        "a": "Stuck-at-0-fault",
+        "b": "Stuck-at-1-fault",
+        "c": "No fault",
+        "d": "All of these"
+      },
+      "explanations": {
+        "a": "",
+        "b": "",
+        "c": "",
+        "d": "The correct answer is d) All of the above because a wire can either be stuck-at-0, stuck-at-1, or function normally with no fault."
+      },
+      "correctAnswer": "d",
+      "difficulty": "intermediate"
     }
   ]
 }
